@@ -32,8 +32,6 @@ export const CardWrapper = ({
         <div>
             <Card className="w-[400px]">
                 <CardHeader>
-                    {/* <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription> */}
                     <Header label={headerLabel} />
                 </CardHeader>
                 <CardContent>

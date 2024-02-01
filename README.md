@@ -1,7 +1,6 @@
 # Auth toolkit using the newest Next Auth v5 (Auth.js). 
 
 > [!NOTE] 
->
 > Here I cover Two Factor Authentication (2FA), Forgot Password functionality, Email Verification > functionality, Credential Login, OAuth (Google & Github) Login  Two Factor Authentication >>>(2FA), Forgot Password functionality, Email Verification functionality, Credential Login, OAuth >(Google & Github) Login and much more
 >
 

@@ -4,14 +4,14 @@
 > Here I cover Two Factor Authentication (2FA), Forgot Password functionality, Email Verification > functionality, Credential Login, OAuth (Google & Github) Login  Two Factor Authentication >>>(2FA), Forgot Password functionality, Email Verification functionality, Credential Login, OAuth >(Google & Github) Login and much more
 >
 
-> [!IMPORTANT] .ENV
+> [!IMPORTANT] 
 > Set DATABASE_URL in the .env file to point to your existing database.
 
-> [!TIP] DB
+> [!TIP] 
 >Database hosted in neon [neon.tech]
 >Conecting db with postgresql using Prisma + Prisma Client
 
-> [!NOTE] Installations
+> [!NOTE] 
 > shadcn
 > bcrypt
 > 

@@ -15,4 +15,4 @@
 > Instalaciones 
 > shadcn
 > bcrypt
-> 
+> next-auth v5

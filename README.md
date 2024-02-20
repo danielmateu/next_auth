@@ -12,6 +12,7 @@
 >Conecting db with postgresql using Prisma + Prisma Client
 
 > [!NOTE] 
+> Instalaciones 
 > shadcn
 > bcrypt
 > 

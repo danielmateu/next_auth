@@ -11,23 +11,34 @@ export const {
     signIn,
     signOut
 } = NextAuth({
-    // providers: [GitHub],
+    pages: {
+        signIn: "auth/login",
+        error: "auth/error",
+    },
+    events: {
+        async linkAccount({ user }) {
+            await db.user.update({
+                where: { id: user.id },
+                data: { emailVerified: new Date() }
+            })
+        }
+    },
     callbacks: {
-        // async signIn({ user }) {
-        //     if (!user.id) {
-        //         return false;
-        //     }
-        //     const existingUser = await getUserById(user.id)
-        //     if (!existingUser || !existingUser.emailVerified) {
-        //         return false
-        //     }
+        async signIn({ user, account }) {
+            // Allow OAuth without email verification
+            if (account?.provider !== "credentials") return true
 
-        //     return true
-        // },
+            const existingUser = await getUserById(user.id)
+
+            // Prevent Sign in without email verification
+
+            if (!existingUser?.emailVerified) return false
+
+            // Todo: Add 2FA check here
+
+            return true
+        },
         async session({ token, session }) {
-            // console.log({
-            //     sesionToken: token,
-            // })
             if (token.sub && session.user) {
                 session.user.id = token.sub
             }

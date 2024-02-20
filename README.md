@@ -10,6 +10,8 @@
 > [!TIP] 
 >Database hosted in neon [neon.tech]
 >Conecting db with postgresql using Prisma + Prisma Client
+> If Prisma Schema recive some changes -> npx prisma generate + npx prisma db push
+> npx prisma studio to check the ORM
 
 > [!NOTE] 
 > Instalaciones 
